@@ -79,18 +79,40 @@
                             <p>You have the option of monthly or yearly billing.</p>
                         </div>
                         <!-- STEP-2 FORM CONTENT -->
-                        <div>
-                            <label for="user_name">Name</label>
-                            <input type="text" id="user_name" placeholder="e.g. Stephen King" name="user_name" required>
-                        </div>
-                        <div>
-                            <label for="email_address">Email</label>
-                            <input type="email" id="email_address" placeholder="e.g. stephenking@lorem.com" name="email_address" required>
-                        </div>
-                        <div>
-                            <label for="phone_number">Phone Number:</label>
-                            <input type="tel" id="phone_number" name="phone_number" pattern="\+[0-9]{1,3}-[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                                placeholder="e.g. +1234 567 890" required>
+                        <div class="payment-container">
+
+                            <!-- ARCADE PLAN DIV -->
+                            <div class="card">
+                                <input type="radio" id="arcade" name="payment-plan">
+                                <label for="light">
+                                    <img src="assets/images/icon-arcade.svg" alt="">
+                                    <h3>Arcade</h3>
+                                    <span>$90/yr</span>
+                                    <p>2 months free</p>
+                                </label>
+                            </div>
+
+                            <!-- ADVANCED PLAN DIV -->
+                            <div class="card">
+                                <input type="radio" id="advanced" name="payment-plan">
+                                <label for="light">
+                                    <img src="assets/images/icon-arcade.svg" alt="">
+                                    <h3>Arcade</h3>
+                                    <span>$90/yr</span>
+                                    <p>2 months free</p>
+                                </label>
+                            </div>
+
+                            <!-- PRO PLAN DIV -->
+                            <div class="card">
+                                <input type="radio" id="pro" name="payment-plan">
+                                <label for="light">
+                                    <img src="assets/images/icon-arcade.svg" alt="">
+                                    <h3>Arcade</h3>
+                                    <span>$90/yr</span>
+                                    <p>2 months free</p>
+                                </label>
+                            </div>
                         </div>
                     </div>
 
