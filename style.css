@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@200;300;400;700&family=Ubuntu:wght@400;500;700&display=swap');
+:root {
+    --Marine-blue: hsl(213, 96%, 18%);
+    --Purplish-blue: hsl(243, 100%, 62%);
+    --Pastel-blue: hsl(228, 100%, 84%);
+    --Light-blue: hsl(206, 94%, 87%);
+    --Strawberry-red: hsl(354, 84%, 57%);
+
+    --Cool-gray: hsl(231, 11%, 63%);
+    --Light-gray: hsl(229, 24%, 87%);
+    --Magnolia: hsl(217, 100%, 97%);
+    --Alabaster: hsl(231, 100%, 99%);
+    --White: hsl(0, 0%, 100%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Ubuntu;
+    background-color: var(--Magnolia);
+    font-size: 16px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    width: 70%;
+    max-width: 750px;
+    /* min-height: 50%; */
+    background-color: hsl(0, 0%, 100%);
+    padding: 10px;
+}
+
+label, input {
+    display: block;
+}
+
+/* FORM CONTAINER STYLING */
+#container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+
+    height: 100%;
+}
+
+/* SIDEBAR STYLING */
+#sidebar {
+    background: url(assets/images/bg-sidebar-desktop.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    color: hsl(0, 0%, 100%);
+    font-size: 12px;
+    border-radius: 8px;
+}
+
+#sidebar #steps-container {
+    padding: 20px;
+}
+
+/* FOR DYNAMIC STEP BACKGROUND */
+#sidebar #steps-container .active {
+    background: hsl(206, 94%, 87%);
+    color: black;
+}
+/* ************** */
+
+#sidebar .steps {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 20px;
+}
+
+#sidebar .num {
+    border: 1px solid hsl(229, 24%, 87%);
+    border-radius: 50%;
+    font-size: 0.6rem;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#sidebar .step-info > :first-child {
+    color: hsl(231, 11%, 63%);
+    font-size: 0.5rem;
+}
+
+#sidebar .step-info > :nth-child(2) {
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+
+/* FORM SECTION STYLING */
+
+#info {
+    padding: 15px 30px;
+    margin: 0 auto;
+
+    /* overflow: scroll; */
+
+    max-height: 600px;
+    /* border: 1px solid red; */
+}
+
+#form-container {
+    margin-top: 20px;
+    /* border: 1px solid red; */
+}
+
+.form-header {
+    margin-bottom: 25px;
+}
+
+.form-header p {
+    color: hsl(231, 11%, 63%);
+    font-size: 0.7rem;
+    margin-top: 3px;
+}
+
+/* HIDING AND DISPLAYING FORM-FIELD */
+#info .form-field {
+    display: none;
+    /* border: 1px solid red; */
+}
+
+#info .form-field.active {
+    display: block;
+}
+
+/* SYLING THE FIRST FORM */
+/* change the selector below later */
+.form-field div {
+    margin-bottom: 20px;
+}
+
+.form-field label {
+    font-size: 0.7rem;
+    margin-bottom: 5px;
+}
+
+.form-field input {
+    border: 1px solid hsl(229, 24%, 87%);
+    width: 100%;
+    padding: 8px;
+    border-radius: 6px;
+
+    transition: 1s;
+}
+
+.form-field input::placeholder {
+    font-size: 0.7rem;
+    color: hsl(231, 11%, 63%);
+}
+
+.form-field input:focus-visible {
+    outline: 0.5px solid hsl(243, 100%, 62%);
+}
+
+.form-field input:hover {
+    border:1px solid hsl(243, 100%, 62%)
+}
+
+/* .form-field-4, .form-field-3, .form-field-2 {
+    display: none;
+} */
+
+/* BUTTON STYLING */
+.btn-div {
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+    /* border: 1px solid red; */
+    margin-top: 100px;
+    width: 100%;
+}
+
+.btn-div .nav-btn:disabled {
+    display: none;
+}
+
+.btn-div #next, #confirm {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    color: hsl(0, 0%, 100%);
+    background: hsl(213, 96%, 18%);
+    font-size: 0.7rem;
+
+    cursor: pointer;
+    transition: 1s;
+}
+
+.btn-div #next:hover {
+    background: hsl(213, 78%, 34%);
+}
+
+.btn-div #back {
+    border: none;
+    background: none;
+
+
+    color: var(--Cool-gray);
+    font-size: 0.7rem;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.btn-div #back:hover {
+    color: hsl(213, 78%, 34%);
+}
+
+.btn-div #confirm {
+    background-color: var(--Purplish-blue);
+}
+
+.btn-div #confirm:hover {
+    background-color: var(--Pastel-blue);
+}
